@@ -40,14 +40,56 @@
             cursor: pointer;
         }
 
-        h2 {
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 10px;
+        /* Navigation Menu */
+        nav {
+            display: flex;
+            gap: 15px;
         }
 
-        p, ul {
-            margin-bottom: 10px;
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: inherit;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ccc;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .profile-info {
+            max-width: 600px;
+        }
+
+        .profile-info h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
         }
 
         /* Light Mode */
@@ -78,15 +120,23 @@
             <button class="dark-mode-toggle">🌙</button>
         </header>
         
-        <section>
-            <h2>Explore my projects, work, and more!</h2>
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Publications</a>
+        </nav>
+
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="profile-info">
+                <h2>MUSENGAMANA JEAN DE DIEU</h2>
+                <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
+            </div>
+            <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
         </section>
 
-        <section>
-            <h2>About Me</h2>
-            <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
-        </section>
-
+        <!-- Selected Publications -->
         <section>
             <h2>Selected Publications</h2>
             <ul>
@@ -99,6 +149,7 @@
             </ul>
         </section>
 
+        <!-- Contact -->
         <section>
             <h2>Contact</h2>
             <p>Feel free to reach out to me via email:</p>
@@ -106,6 +157,15 @@
                 <li><a href="mailto:jeanmusenga@whu.edu.cn">jeanmusenga@whu.edu.cn</a></li>
                 <li><a href="mailto:mjados@outlook.com">mjados@outlook.com</a></li>
             </ul>
+        </section>
+
+        <!-- Social Media Icons -->
+        <section>
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank">🔗</a>
+                <a href="https://twitter.com" target="_blank">🐦</a>
+                <a href="https://github.com" target="_blank">🐙</a>
+            </div>
         </section>
     </div>
 
