@@ -1,1 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Personal Website of MUSENGAMANA JEAN DE DIEU</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .dark-mode-toggle {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Navigation Menu */
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            color: inherit;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ccc;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .profile-info {
+            max-width: 600px;
+        }
+
+        .profile-info h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .light-mode .dark-mode-toggle {
+            color: #333;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode .dark-mode-toggle {
+            color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My Personal Website of MUSENGAMANA JEAN DE DIEU</h1>
+            <button class="dark-mode-toggle">🌙</button>
+        </header>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="#">About</a>
+            <a href="#">Blog</a>
+            <a href="#">Publications</a>
+        </nav>
+
+        <!-- Profile Section -->
+        <section class="profile">
+            <div class="profile-info">
+                <h2>MUSENGAMANA JEAN DE DIEU</h2>
+                <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
+            </div>
+            <img src="profile-picture.jpg" alt="MUSENGAMANA JEAN DE DIEU">
+        </section>
+
+        <!-- Selected Publications -->
+        <section>
+            <h2>Selected Publications</h2>
+            <ul>
+                <li>Jean de Dieu Musengamana, Peng Liang, Mojtaba Shahin. "Characterizing Architecture Related Posts and their Usefulness in Stack Overflow." Journal of Systems and Software, 2023, 198: 111608. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
+                <li>Jean de Dieu Musengamana, Peng Liang, Mojtaba Shahin, Chen Yang, Zengyang Li. "Mining Architectural Information: A Systematic Mapping Study." Empirical Software Engineering, 2024, 29: Article No. 79. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
+                <li>Jean de Dieu Musengamana, Peng Liang, Mojtaba Shahin. "How Developers Search for Architectural Information? An Industrial Survey." In: Proceedings of the 19th IEEE International Conference on Software Architecture (ICSA). IEEE, 2022: 58-68. (CCF 推荐 C 类软件工程会议， 软件体系结构顶级会议)</li>
+                <li>Jean de Dieu Musengamana, Peng Liang, Mojtaba Shahin. "How Do OSS Developers Utilize Architectural Solutions from Q&A Sites: An Empirical Study." IEEE Transactions on Software Engineering, Under Review, 2025. (CCF 推荐 A 类软件工程期刊，SCI一区)</li>
+                <li>Jean de Dieu Musengamana, Peng Liang, Mojtaba Shahin. "How Do Users Revise Architectural Related Questions on Stack Overflow: An Empirical Study." Empirical Software Engineering, Under Review, 2025. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
+                <li>Jean de Dieu Musengamana, Peng Liang, Mojtaba Shahin. "Automatic Mining of Architectural Issue-Solution Pairs from Online Developer Communities." IEEE Transactions on Software and Methodology, Under Review, 2025. (CCF 推荐 A 类软件工程期刊，SCI一区)</li>
+            </ul>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <h2>Contact</h2>
+            <p>Feel free to reach out to me via email:</p>
+            <ul>
+                <li><a href="mailto:jeanmusenga@whu.edu.cn">jeanmusenga@whu.edu.cn</a></li>
+                <li><a href="mailto:mjados@outlook.com">mjados@outlook.com</a></li>
+            </ul>
+        </section>
+
+        <!-- Social Media Icons -->
+        <section>
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank">🔗</a>
+                <a href="https://twitter.com" target="_blank">🐦</a>
+                <a href="https://github.com" target="_blank">🐙</a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const toggleButton = document.querySelector('.dark-mode-toggle');
+        const body = document.body;
+
+        // Check if the user has a preferred theme saved in localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.add('light-mode');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+
+            // Save the user's theme preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
 
