@@ -77,11 +77,21 @@
             margin-bottom: 30px;
         }
 
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
+		
+/* Centering the image container */
+.image-container {
+    display: flex;
+    justify-content: center;  /* Centers image horizontally */
+    align-items: center;      /* Centers image vertically */
+    height: 100vh;            /* Ensures it takes up full viewport height */
+}
+
+.image-container img {
+    max-width: 100%;          /* Ensures the image doesn't overflow */
+    height: auto;             /* Maintains aspect ratio */
+}
+
+        
 
         .profile-info {
             max-width: 600px;
@@ -133,7 +143,10 @@
                 <h2>MUSENGAMANA JEAN DE DIEU</h2>
                 <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
             </div>
-            <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
+            <div class="image-container">
+              <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
+           </div>
+
         </section>
 
         <!-- Selected Publications -->
