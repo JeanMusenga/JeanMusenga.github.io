@@ -5,112 +5,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to My Personal Website of MUSENGAMANA JEAN DE DIEU</title>
     <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;  /* Centers content horizontally */
+    align-items: center;      /* Centers content vertically */
+    height: 100vh;            /* Full height of the viewport */
+    flex-direction: column;   /* Stack elements vertically */
+}
 
-        .container {
-            padding: 20px;
-        }
+/* Container Styles */
+.container {
+    width: 80%;              /* Control the width of the container */
+    max-width: 1000px;       /* Maximum width */
+    padding: 20px;
+    text-align: center;      /* Centers the text inside */
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
 
-        h1 {
-            font-size: 2rem;
-        }
+/* Navigation Menu */
+nav {
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    gap: 15px;
+}
 
-        .dark-mode-toggle {
-            background-color: transparent;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
 
-        /* Navigation Menu */
-        nav {
-            display: flex;
-            gap: 15px;
-        }
+nav a:hover {
+    background-color: #ccc;
+}
 
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            color: inherit;
-            padding: 5px 10px;
-            transition: background-color 0.3s ease;
-        }
+/* Profile Section */
+.profile {
+    display: flex;
+    flex-direction: column; /* Stack profile image and info vertically */
+    align-items: center;    /* Center profile content horizontally */
+    margin-bottom: 30px;
+}
 
-        nav a:hover {
-            background-color: #ccc;
-        }
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px; /* Add space between the image and text */
+}
 
-        /* Social Media Icons */
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
+/* Light Mode */
+body.light-mode {
+    background-color: #fff;
+    color: #333;
+}
 
-        .social-icons a {
-            text-decoration: none;
-            font-size: 1.5rem;
-        }
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
 
-        /* Profile Section */
-        .profile {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons */
+    gap: 10px;
+}
 
-        .profile img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
+.social-icons a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
 
-        .profile-info {
-            max-width: 600px;
-        }
-
-        .profile-info h2 {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        /* Light Mode */
-        body.light-mode {
-            background-color: #fff;
-            color: #333;
-        }
-
-        .light-mode .dark-mode-toggle {
-            color: #333;
-        }
-
-        /* Dark Mode */
-        body.dark-mode {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-
-        .dark-mode .dark-mode-toggle {
-            color: #e0e0e0;
-        }
     </style>
 </head>
 <body>
