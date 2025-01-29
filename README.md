@@ -15,4 +15,4 @@ Specifically, I explore areas such mining architectural knowldge from software a
 
 ## Contact
 
-Feel free to reach out to me via email: jeanmusenga@whu.edu.cn or mjados@outlook.com
+Feel free to reach out to me via email: [jeanmusenga@whu.edu.cn] or [mjados@outlook.com]
