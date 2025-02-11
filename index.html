@@ -21,24 +21,37 @@
             align-items: center;
             min-height: 100vh;
             background-color: #fff;
+            color: #333;
+            padding: 20px;
         }
 
         .container {
-            width: 80%;
+            width: 70%;
             max-width: 1200px;
-            padding: 20px;
-            text-align: center;
+            text-align: left;
         }
 
         header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
         }
 
-        h1 {
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        header h1 {
             font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #555;
         }
 
         .dark-mode-toggle {
@@ -46,88 +59,47 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-        }
-
-        /* Navigation Menu */
-        nav {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            color: inherit;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #ccc;
-        }
-
-        /* Profile Section */
-        .profile {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-bottom: 30px;
-        }
-
-        .profile-info {
-            max-width: 600px;
-            margin-bottom: 20px;
-        }
-
-        .profile-info h2 {
-            font-size: 1.8rem;
-            font-weight: bold;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 30vh;
-            margin-bottom: 30px;
-        }
-
-        .image-container img {
-            max-width: 30%;
-            height: auto;
+            margin-top: 20px;
         }
 
         /* Selected Publications Section */
         .SelectedPublications {
-            margin-bottom: 30px;
+            margin-top: 30px;
         }
 
-        /* Contact Section */
-        .Contact {
-            margin-bottom: 30px;
+        .SelectedPublications h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
         }
 
-        /* Social Media Section */
-        .SocialMedia {
-            margin-bottom: 30px;
+        .SelectedPublications ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Light Mode */
+        .SelectedPublications li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .SelectedPublications li strong {
+            font-weight: bold;
+        }
+
+        /* Light and Dark Mode */
         body.light-mode {
             background-color: #fff;
             color: #333;
         }
 
-        .light-mode .dark-mode-toggle {
-            color: #333;
-        }
-
-        /* Dark Mode */
         body.dark-mode {
             background-color: #121212;
             color: #e0e0e0;
+        }
+
+        .dark-mode-toggle {
+            color: #333;
         }
 
         .dark-mode .dark-mode-toggle {
@@ -139,59 +111,26 @@
 <body>
     <div class="container">
         <header>
-            <h1>Dr MUSENGAMANA Jean de Dieu</h1>
+            <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
+            <div>
+                <h1>MUSENGAMANA JEAN DE DIEU</h1>
+                <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, and Natural Language Processing (NLP), with a particular interest in Large Language Models (LLMs). I explore mining architectural knowledge from software artifacts like code, text, and images.</p>
+            </div>
         </header>
 
-        <!-- Navigation Menu -->
-        <nav class="NavigationMenue">
-            <a href="#">About</a>
-            <a href="#">Blog</a>
-            <a href="https://scholar.google.com/citations?user=nzuFm8UAAAAJ&hl=en&oi=sra">Publications</a>
-        </nav>
-
-        <!-- Profile Section -->
-        <section class="profile">
-            <div class="profile-info">
-                <h2>MUSENGAMANA JEAN DE DIEU</h2>
-                <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
-            </div>
-            <div class="image-container">
-              <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
-              <button class="dark-mode-toggle">🌙</button>
-           </div>
-        </section>
-
-        <!-- Selected Publications -->
+        <!-- Selected Publications Section -->
         <section class="SelectedPublications">
             <h2>Selected Publications</h2>
-            <ol>
+            <ul>
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "Characterizing Architecture Related Posts and their Usefulness in Stack Overflow." Journal of Systems and Software, 2023, 198: 111608. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin, Chen Yang, Zengyang Li. "Mining Architectural Information: A Systematic Mapping Study." Empirical Software Engineering, 2024, 29: Article No. 79. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "How Developers Search for Architectural Information? An Industrial Survey." In: Proceedings of the 19th IEEE International Conference on Software Architecture (ICSA). IEEE, 2022: 58-68. (CCF 推荐 C 类软件工程会议， 软件体系结构顶级会议)</li>
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "How Do OSS Developers Utilize Architectural Solutions from Q&A Sites: An Empirical Study." IEEE Transactions on Software Engineering, Under Review, 2025. (CCF 推荐 A 类软件工程期刊，SCI一区)</li>
-                <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "How Do Users Revise Architectural Related Questions on Stack Overflow: An Empirical Study." Empirical Software Engineering, Under Review, 2025. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
-                <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "Automatic Mining of Architectural Issue-Solution Pairs from Online Developer Communities." IEEE Transactions on Software and Methodology, Under Review, 2025. (CCF 推荐 A 类软件工程期刊，SCI一区)</li>
-            </ol>
-        </section>
-
-        <!-- Contact -->
-        <section class="Contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out to me via email:</p>
-            <ul>
-                <li><a href="mailto:jeanmusenga@whu.edu.cn">jeanmusenga@whu.edu.cn</a></li>
-                <li><a href="mailto:mjados@outlook.com">mjados@outlook.com</a></li>
             </ul>
         </section>
 
-        <!-- Social Media Icons -->
-        <section class="SocialMedia">
-            <div class="social-icons">
-                <a href="https://linkedin.com" target="_blank">🔗</a>
-                <a href="https://twitter.com" target="_blank">🐦</a>
-                <a href="https://github.com" target="_blank">🐙</a>
-            </div>
-        </section>
+        <!-- Dark Mode Toggle -->
+        <button class="dark-mode-toggle">🌙</button>
     </div>
 
     <script>
