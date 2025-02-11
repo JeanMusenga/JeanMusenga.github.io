@@ -50,23 +50,11 @@
             text-decoration: none;
             font-weight: bold;
             color: inherit;
-            /* Navigation Menu padding: 5px 10px;*/
             transition: background-color 0.3s ease;
         }
 
         nav a:hover {
             background-color: #ccc;
-        }
-
-        /* Social Media Icons */
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            text-decoration: none;
-            font-size: 1.5rem;
         }
 
         /* Profile Section */
@@ -75,66 +63,21 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 30px;
-			margin-left: 95px;
+            margin-left: 95px;
         }
 
-		 /* Selected Publications Section */
-        .SelectedPublications {
+        /* Centering the image container */
+        .image-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            margin-bottom: 30px;
-			margin-left: 95px;
-			margin-right:95px;
+            height: 30vh;
         }
 
-		 /* Contact Section */
-        .Contact {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-			margin-left: 95px;
-			margin-right:95px;
+        .image-container img {
+            max-width: 30%;
+            height: auto;
         }
-
-		/* Social Media Section */
-        .SocialMedia {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-			margin-left: 95px;
-			margin-right:95px;
-        }
-
-		/* 	NavigationMenue Section */
-        .	NavigationMenue {
-            display: flex;
-            justify-content: space-between;
-            align-items: right;
-            margin-bottom: 30px;
-			margin-left: 1000px;
-			margin-right:95px;
-        }
-
-	
-
-		
-/* Centering the image container */
-.image-container {
-    display: flex;
-    justify-content: center;  /* Centers image horizontally */
-    align-items: center;      /* Centers image vertically */
-    height: 30vh;            /* Ensures it takes up full viewport height */
-}
-
-.image-container img {
-    max-width: 30%;          /* Ensures the image doesn't overflow */
-    height: auto;             /* Maintains aspect ratio */
-}
-
-        
 
         .profile-info {
             max-width: 600px;
@@ -168,16 +111,11 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <!-- <h2>MUSENGAMANA JEAN DE DIEU</h1>-->
-           
-        </header>
-        
         <!-- Navigation Menu -->
-        <nav class="NavigationMenue">
+        <nav class="NavigationMenu">
             <a href="#">About</a>
             <a href="#">Blog</a>
-            <a href="https://scholar.google.com/citations?user=nzuFm8UAAAAJ&hl=en&oi=sra">Publications</a>
+            <a href="https://scholar.google.com/citations?user=nzuFm8UAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Publications</a>
         </nav>
 
         <!-- Profile Section -->
@@ -187,17 +125,14 @@
                 <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
             </div>
             <div class="image-container">
-              <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
-	      <button class="dark-mode-toggle">🌙</button>
-           </div>
-
+                <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
+                <button class="dark-mode-toggle">🌙</button>
+            </div>
         </section>
 
         <!-- Selected Publications -->
         <section class="SelectedPublications">
-		<div>
             <h2>Selected Publications</h2>
-
             <ol>
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "Characterizing Architecture Related Posts and their Usefulness in Stack Overflow." Journal of Systems and Software, 2023, 198: 111608. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin, Chen Yang, Zengyang Li. "Mining Architectural Information: A Systematic Mapping Study." Empirical Software Engineering, 2024, 29: Article No. 79. (CCF 推荐 B 类软件工程期刊，SCI二区)</li>
@@ -207,7 +142,6 @@
                 <li><strong>Jean de Dieu Musengamana</strong>, Peng Liang, Mojtaba Shahin. "Automatic Mining of Architectural Issue-Solution Pairs from Online Developer Communities." IEEE Transactions on Software and Methodology, Under Review, 2025. (CCF 推荐 A 类软件工程期刊，SCI一区)</li>
             </ol>
         </section>
-		</div>
 
         <!-- Contact -->
         <section class="Contact">
@@ -220,11 +154,11 @@
         </section>
 
         <!-- Social Media Icons -->
-         <section class="SocialMedia">
+        <section class="SocialMedia">
             <div class="social-icons">
-                <a href="https://linkedin.com" target="_blank">🔗</a>
-                <a href="https://twitter.com" target="_blank">🐦</a>
-                <a href="https://github.com" target="_blank">🐙</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">🔗</a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦</a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer">🐙</a>
             </div>
         </section>
     </div>
@@ -233,25 +167,7 @@
         const toggleButton = document.querySelector('.dark-mode-toggle');
         const body = document.body;
 
-        // Check if the user has a preferred theme saved in localStorage
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
         } else {
-            body.classList.add('light-mode');
-        }
-
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            body.classList.toggle('light-mode');
-
-            // Save the user's theme preference
-            if (body.classList.contains('dark-mode')) {
-                localStorage.setItem('theme', 'dark');
-            } else {
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    </script>
-</body>
-</html>
-
+            body.classList
