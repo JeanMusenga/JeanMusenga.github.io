@@ -16,10 +16,18 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             transition: background-color 0.3s ease, color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fff;
         }
 
         .container {
+            width: 80%;
+            max-width: 1200px;
             padding: 20px;
+            text-align: center;
         }
 
         header {
@@ -44,6 +52,8 @@
         nav {
             display: flex;
             gap: 15px;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
         nav a {
@@ -60,18 +70,28 @@
         /* Profile Section */
         .profile {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            flex-direction: column;
             margin-bottom: 30px;
-            margin-left: 95px;
         }
 
-        /* Centering the image container */
+        .profile-info {
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .profile-info h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
         .image-container {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 30vh;
+            margin-bottom: 30px;
         }
 
         .image-container img {
@@ -79,13 +99,19 @@
             height: auto;
         }
 
-        .profile-info {
-            max-width: 600px;
+        /* Selected Publications Section */
+        .SelectedPublications {
+            margin-bottom: 30px;
         }
 
-        .profile-info h2 {
-            font-size: 1.8rem;
-            font-weight: bold;
+        /* Contact Section */
+        .Contact {
+            margin-bottom: 30px;
+        }
+
+        /* Social Media Section */
+        .SocialMedia {
+            margin-bottom: 30px;
         }
 
         /* Light Mode */
@@ -107,15 +133,20 @@
         .dark-mode .dark-mode-toggle {
             color: #e0e0e0;
         }
+
     </style>
 </head>
 <body>
     <div class="container">
+        <header>
+            <h1>Dr MUSENGAMANA Jean de Dieu</h1>
+        </header>
+
         <!-- Navigation Menu -->
-        <nav class="NavigationMenu">
+        <nav class="NavigationMenue">
             <a href="#">About</a>
             <a href="#">Blog</a>
-            <a href="https://scholar.google.com/citations?user=nzuFm8UAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer">Publications</a>
+            <a href="https://scholar.google.com/citations?user=nzuFm8UAAAAJ&hl=en&oi=sra">Publications</a>
         </nav>
 
         <!-- Profile Section -->
@@ -125,9 +156,9 @@
                 <p>I am a Ph.D. student (2019-) in Computer Science at Wuhan University, advised by Prof. Liang Peng. My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), and I am currently interested in Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts such as code, text, images, etc.</p>
             </div>
             <div class="image-container">
-                <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
-                <button class="dark-mode-toggle">🌙</button>
-            </div>
+              <img src="photo1.jpeg" alt="MUSENGAMANA JEAN DE DIEU">
+              <button class="dark-mode-toggle">🌙</button>
+           </div>
         </section>
 
         <!-- Selected Publications -->
@@ -156,9 +187,9 @@
         <!-- Social Media Icons -->
         <section class="SocialMedia">
             <div class="social-icons">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">🔗</a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">🐦</a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">🐙</a>
+                <a href="https://linkedin.com" target="_blank">🔗</a>
+                <a href="https://twitter.com" target="_blank">🐦</a>
+                <a href="https://github.com" target="_blank">🐙</a>
             </div>
         </section>
     </div>
@@ -167,7 +198,24 @@
         const toggleButton = document.querySelector('.dark-mode-toggle');
         const body = document.body;
 
+        // Check if the user has a preferred theme saved in localStorage
         if (localStorage.getItem('theme') === 'dark') {
             body.classList.add('dark-mode');
         } else {
-            body.classList
+            body.classList.add('light-mode');
+        }
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            body.classList.toggle('light-mode');
+
+            // Save the user's theme preference
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
+</body>
+</html>
