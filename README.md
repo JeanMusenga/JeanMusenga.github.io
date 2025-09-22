@@ -1,7 +1,7 @@
 # MUSENGAMANA JEAN DE DIEU
-Ph.D. Student at Wuhan University
+A researcher in Software Engineering (SE)
 
-I am a PhD researcher in Software Engineering. 
+I am a PhD researcher in SE. 
 My research focuses on Empirical Software Engineering, Software Architecture, Mining Software Repositories, Natural Language Processing (NLP), Deep Learning, and Large Language Models (LLMs). Specifically, I explore areas such as mining architectural knowledge from software artifacts, including commits, issue comments, and post threads.  
 
 ## Selected Publications
